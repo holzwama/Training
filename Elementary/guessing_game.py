@@ -1,15 +1,18 @@
 import random
 
-number = random.randint(1, 9)
+LIMIT = 1000
 
-player_name = input("Enter your Username")
+number = random.randint(1, LIMIT)
+
+player_name = input("Enter your Username: ")
+print(f"Guess a Number between 1 and {LIMIT}")
 print("The User: " + player_name + " has 10 tries")
 
 def game():
     tries = 0
     while tries <= 10:
         
-        print("Start guessing. This is guess: " ,tries)
+        print("Start guessing. This is guess: " ,tries+1)
         user_guess = int(input())
         if user_guess < number:
             print("The number to guess is higher!")

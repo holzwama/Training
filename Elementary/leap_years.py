@@ -1,27 +1,18 @@
 
 next_years = 20
 print("Type a year")
-users_year = int(input())
+year_input = int(input())
+list_year = range(year_input, year_input+next_years+1)
 
-list_year = []
-
-def fill_list(empty_list):
-    counter = 1
-    while len(empty_list) != 20:
-        empty_list.append(users_year + counter)
-        counter += 1
-
-def leap_year(list_):
-    
-    for x in list_:
-        if x % 100 == 0:
-            print(x, "No leap year")
-        elif x % 400 == 0:
-            print(x, "is a leap year")
-        elif x %   4 == 0:
-            print(x, "Is a leap year")
+def leap_year(years):
+    for year in years:
+        if year % 400 == 0:
+            print(year, "is a leap year")
+        elif year % 100 == 0:
+            print(year, "No leap year")        
+        elif year %   4 == 0:
+            print(year, "Is a leap year")
         else:
-            print(x, "No leap year")
+            print(year, "No leap year")
 
-fill_list(list_year)
 leap_year(list_year)
