@@ -15,7 +15,7 @@ def primes(prime_list):
         if x % 1 == 0:
             print(x, "ist keine Primzahl")
             
-        if x % x == 0:
+        elif x % x == 0:
             print(x,"ist eine Primzahl")
             
 
