@@ -10,5 +10,5 @@ def quicksort(lis):
     if size < 2:
         return lis
     
-    position = 0
+
 
