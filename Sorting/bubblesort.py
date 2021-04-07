@@ -5,17 +5,16 @@ MIN = 0
 random_list = [random.randint(MIN,MAX) for i in range(LIST_SIZE)]
 
 def bubblesort(lis):
-    Sorted = False
-    temp = 0
-    element_1 = 0
-    element_2 = 1
-    while not Sorted:
-        temp = random_list[element_2]
-        if random_list[element_1] > random_list[element_2]:
-            random_list[element_2] = random_list[element_1]
-            random_list[element_1] = temp
-            element_1 +=1
-            element_2 +=1
 
+    size = len(lis)
+    
+    if size < 2:
+        return lis
 
+    for j in range(len(lis)):
+        for i in range(len(lis) - 1):
+            if lis[i] > lis[i +1]:
+                lis[i], lis[i +1] = lis[j+1], lis[j]
+print(random_list)
 bubblesort(random_list)
+print(random_list)
