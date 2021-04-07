@@ -12,24 +12,3 @@ def quicksort(lis):
     
     position = 0
 
-    for x in range(1, size):
-        if lis[x] <= lis[0]:
-            position += 1
-            temp = lis[x]
-            lis[x] = lis[position]
-            lis[position] = temp
-    
-    temp = lis[0]
-    lis[0] = lis[position] 
-    lis[position] = temp 
-    
-    left = quicksort(lis[0:position]) 
-    right = quicksort(lis[position+1:size]) 
-
-    lis = left + [lis[position]] + right 
-    
-    return lis
-
-print(random_list)
-quicksort(random_list)
-print(random_list)
