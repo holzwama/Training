@@ -7,16 +7,13 @@ number_two = int(sys.argv[3])
 def calculator(value_one, value_two):
     if sign == "+":
         result = value_one + value_two
-        print(result)
-    if sign == "-":
+    elif sign == "-":
         result = value_one - value_two
-        print(result)
-    if sign == "*":
+    elif sign == "*":
         result = value_one * value_two
-        print(result)
-    if sign == "/":
+    elif sign == "/":
         result = value_one / value_two
-        print(result)
+    return result
 
-calculator(number_one, number_two)
+print(calculator(number_one, number_two))
 
