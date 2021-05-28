@@ -1,11 +1,10 @@
-lis = [1, 2, 3]
-i = 0
+def ggt(numbers):
+	for i in range(0, len(numbers)-1):
+		while numbers[1]:      
+			numbers[0], numbers[1] = numbers[1], numbers[0] % numbers[1]
+		numbers[1] = numbers[i+1]
+		
+	return numbers[0]
 
-for ele in lis:
-    print(ele)
-
-
-while i < len(lis):
-    print(lis[i])
-    i += 1
+lis = [12, 3 , 6]
 
