@@ -6,5 +6,5 @@ while idx < len(lis):
     print(key, dic[key])
     idx = idx + 1
 
-for key in dic:
+for key in dic.keys():
     print(key, dic[key])

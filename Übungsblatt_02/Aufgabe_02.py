@@ -1,3 +1,2 @@
-Name = input(print("Geben Sie ihren Vornamen an"))
-
-print((Name[:1]) + "x" + Name[-4:])
+Name = input("Geben Sie ihren Vornamen an \n")
+print(Name[:1] + "x" + Name[2:])
