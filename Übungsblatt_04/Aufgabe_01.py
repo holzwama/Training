@@ -4,6 +4,6 @@ kubik_list = [x*x*x for x in basic_numbers]
 print(kubik_list)
 
 ##Teiler
-
-print(basic_numbers)
+teiler_numbers = []
+print(teiler_numbers)
 
