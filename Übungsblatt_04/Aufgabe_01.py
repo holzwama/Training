@@ -7,13 +7,8 @@ print(kubik_list)
 print(kubik_list_a)
 
 ##Teiler
-<<<<<<< HEAD
-print("ALLE TEILER / List Comprehension")
-
-=======
 teiler_numbers = []
 print(teiler_numbers)
->>>>>>> c677e842b09952b5cc8b4b3de3d517289aa42842
 
 def teilerVonZ(z):
     return [x for x in range(2, z // 2 + 1) if z % x == 0]
