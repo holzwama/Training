@@ -2,18 +2,34 @@ import string
 
 buchstabenListeLower = list(string.ascii_lowercase)
 buchstabenListeUpper = list(string.ascii_uppercase)
+try:
+    userinput = input('"Welche Datei wollen sie öffnen?"')
 
-userinput = list(input("Geben Sie den Text ein \n"))
+    with open(userinput, 'r') as f2:
+        data = f2.read()
 
-def buchstabenSwap(lis):
-    position = 13
-    i = 1
-    decodedList = []
-    for buchstabe in lis:
-        if buchstabe == buchstabenListeLower:
-            decodedList.append(buchstabenListeLower)
 
-    return decodedList
+    def rot13(text):
+        result = '' 
 
-result = buchstabenSwap(userinput)
-print(result)
+        for letter in text:
+            #Kleinbuchstaben herausfinden
+            if letter.islower() & letter.isalpha():
+                text = text.lower()
+                result += buchstabenListeLower[(buchstabenListeLower.index(letter) + 13) % 26]
+            ##roßbuchstaben herausfinden
+            elif letter.isupper() & letter.isalpha():
+                text = text.upper()
+                result += buchstabenListeUpper[(buchstabenListeUpper.index(letter) + 13) % 26]
+    
+        return result
+
+    def saveFile(text):
+       f = open("Test_swap.txt", "w")
+       f.write(text)
+       f.close()
+
+    print(rot13(data))
+    saveFile(rot13(data))
+except FileNotFoundError:
+    print("Falscher Dateiname")
