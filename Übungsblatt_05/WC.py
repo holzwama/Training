@@ -16,15 +16,15 @@ def wordsFunc(userlang):
 def charsFunc(userlang):
     with open('Test_python.txt') as infile:
         words=0
-        characters=0
+        chars=0
         for line in infile:
             wordslist=line.split()
             words=words+len(wordslist)
-            characters += sum(len(Word) for Word in wordslist)
+            chars += sum(len(Word) for Word in wordslist)
     if userlang == "de":
-        print(characters, "Buchstaben")
+        print(chars, "Buchstaben")
     else:
-        print(characters, "letters")
+        print(chars, "letters")
 
 # funktion um Anzahl der Linien zu bestimmen
 def linesFunc(userlang):
@@ -40,7 +40,7 @@ def linesFunc(userlang):
 def word_counter(file):
     with open(file) as f:
         return print(Counter(f.read().split()))
-
+# funktion um Anzahl der verschiedenen Buchstaben zu bestimmen  
 def char_counter(file):
     with open(file) as file:
         charcount = {} 
