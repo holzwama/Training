@@ -1,7 +1,7 @@
 
 
 def packer(chars):
-    if chars.isalpha():        # Defines if unpacked
+    if chars.isalpha():      
         groups= []
         last_char = None
 
@@ -14,7 +14,7 @@ def packer(chars):
 
         return ''.join('%s%s' % (g[0], len(g)>1 and len(g) or '') for g in groups)
 
-    else:                   # Seems to be packed
+    else:                   
 
         stack = ""
 
