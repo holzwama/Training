@@ -32,6 +32,6 @@ def printTaxicab2(N):
         i += 1
      
 # Driver code
-N = 5
+N = 10
 printTaxicab2(N)
  
