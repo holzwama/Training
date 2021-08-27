@@ -20,7 +20,7 @@ print(teilerVonZ(123456))
 
 print("ALLE TEILER / primitive")
 
-
+#test
 def funTeilerVonZ(z):
     return list(filter(lambda x: z % x == 0, range(2, z // 2 + 1)))
 

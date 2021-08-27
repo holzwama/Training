@@ -31,7 +31,7 @@ def printTaxicab2(N):
  
         i += 1
      
-
+#test
 N = 10
 printTaxicab2(N)
  
